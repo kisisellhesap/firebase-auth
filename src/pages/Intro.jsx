@@ -6,12 +6,10 @@ const Intro = () => {
   const [user, setUser] = useState();
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
-      console.log(user);
       setUser(user);
     });
   }, []);
 
-  console.log(user);
   return (
     <div className="flex-1 flex  justify-center px-5 ">
       <div className=" flex flex-col items-center gap-4 text-white shadow-lg container  mt-[10rem]">

@@ -130,11 +130,16 @@ const Profile = () => {
             className="bg-white mx-3 p-5 rounded-md flex gap-5 items-center 
 "
           >
-            <img src={user.photoURL} className="rounded-full w-24 h-24" />
-            <div className="flex flex-col gap-2">
-              <span className="font-bold text-xl">Name</span>
-              <h3 className="font-bold text-xl">{user.displayName}</h3>
-            </div>
+            {user.photoURL && (
+              <img src={user.photoURL} className="rounded-full w-24 h-24" />
+            )}
+
+            {user.displayName && (
+              <div className="flex flex-col gap-2">
+                <span className="font-bold text-xl">Name</span>
+                <h3 className="font-bold text-xl">{user.displayName}</h3>
+              </div>
+            )}
 
             <button
               className="ml-auto flex  justify-center rounded-md bg-red px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-yellow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow"
