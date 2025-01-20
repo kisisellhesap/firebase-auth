@@ -130,11 +130,13 @@ const Profile = () => {
             className="bg-white mx-3 p-5 rounded-md flex gap-5 items-center 
 "
           >
-            {user.photoURL && (
-              <img src={user.photoURL} className="rounded-full w-24 h-24" />
-            )}
+            {user.photoURL !==
+              ""(
+                <img src={user.photoURL} className="rounded-full w-24 h-24" />
+              )}
 
-            {user.displayName && (
+            {user.displayName !==
+            (
               <div className="flex flex-col gap-2">
                 <span className="font-bold text-xl">Name</span>
                 <h3 className="font-bold text-xl">{user.displayName}</h3>
